@@ -22,6 +22,19 @@ const FOOD_OPTIONS = [
   "samosa",
 ];
 
+const FOOD_EMOJIS: Record<string, string> = {
+  biryani: "🍛",
+  burger: "🍔",
+  "butter-chicken": "🍗",
+  dessert: "🍰",
+  dosa: "🥞",
+  idly: "⚪",
+  pasta: "🍝",
+  pizza: "🍕",
+  rice: "🍚",
+  samosa: "🥟",
+};
+
 interface FoodData {
   image: string;
 }
@@ -137,6 +150,7 @@ const GameScreen = ({ onGameOver, currentStreak, onStreakUpdate }: GameScreenPro
                       : ""
                   }`}
                 >
+                  <span className="text-2xl mr-2">{FOOD_EMOJIS[option]}</span>
                   {option.replace("-", " ")}
                 </Button>
               ))}
